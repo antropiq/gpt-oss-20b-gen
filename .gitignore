@@ -22,3 +22,8 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+*.aider
+.aider.chat.history.md
+.aider.input.history
+.aider.tags.cache.v4
+!*.aider.conf.yml

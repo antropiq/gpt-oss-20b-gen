@@ -1,5 +1,6 @@
 openai-api-base: "http://localhost:8180/v1"
 model: "openai/gpt-oss-20b"
+weak-model: "openai/llama3.2-1b"
 api-key: "openai=default"
 dark-mode: true
 code-theme: "solarized-dark"
