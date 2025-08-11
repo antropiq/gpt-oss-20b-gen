@@ -1,0 +1,13 @@
+openai-api-base: "http://localhost:8180/v1"
+model: "openai/gpt-oss-20b"
+api-key: "openai=default"
+dark-mode: true
+code-theme: "solarized-dark"
+watch-files: true
+lint: false
+lint-cmd: "npm run lint"
+analytics-disable: true
+verify-ssl: false
+vim: true
+chat-language: "english"
+
