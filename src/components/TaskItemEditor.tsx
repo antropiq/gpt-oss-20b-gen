@@ -5,6 +5,7 @@ import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
 import { DatePicker } from '@mui/x-date-pickers/DatePicker';
 import dayjs from 'dayjs';
 import type { TaskItem } from '../types/task-item';
+import { useEffect, useState, type FC } from 'react';
 
 interface TaskItemEditorProps {
   open: boolean;
@@ -13,11 +14,11 @@ interface TaskItemEditorProps {
   onSave: (task: TaskItem) => void;
 }
 
-const TaskItemEditor: React.FC<TaskItemEditorProps> = ({ open, onClose, task, onSave }) => {
-  const [description, setDescription] = React.useState(task?.description ?? '');
-  const [dueDate, setDueDate] = React.useState<string>(task?.dueDate ?? dayjs().format('YYYY-MM-DD'));
+const TaskItemEditor: FC<TaskItemEditorProps> = ({ open, onClose, task, onSave }) => {
+  const [description, setDescription] = useState(task?.description ?? '');
+  const [dueDate, setDueDate] = useState<string>(task?.dueDate ?? dayjs().format('YYYY-MM-DD'));
 
-  React.useEffect(() => {
+  useEffect(() => {
     if (task) {
       setDescription(task.description);
       setDueDate(task.dueDate);
